@@ -1,6 +1,6 @@
 <p align=center>
   <br>
-  <span>Phicomm K2P Openwrt Autobuild | 斐讯 K2P Openwrt 自动编译（每周一早8点）</span>
+  <span>Openwrt Github Action Build | 斐讯 K2P Openwrt 自动编译 </span>
   <br>
   <span>Customize your own OpenWrt firmware for Phicomm K2P using Github Actions.</span>
   <br>
@@ -45,7 +45,7 @@
 
 ## Info
 
-- gateway: 192.168.1.1
+- gateway: 192.168.2.1 (in diy.sh change it)
 
 ## Features
 
