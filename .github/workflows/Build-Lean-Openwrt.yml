@@ -1,9 +1,9 @@
 #=================================================
-# Description: Phicomm K2P Openwrt Autobuild
+# Description: Openwrt Autobuild
 # Lisence: MIT
 # Author: tjuyy
 #=================================================
-name: Build Lean's OpenWrt for K2P
+name: Build Lean's OpenWrt
 
 on:
   release:
@@ -98,7 +98,7 @@ jobs:
         uses: actions/upload-artifact@main
         if: always()
         with:
-          name: OpenWrt_K2P_bin
+          name: OpenWrt_bin
           path: openwrt/bin
 
       - name: Remove packages
@@ -112,7 +112,7 @@ jobs:
         uses: actions/upload-artifact@main
         if: always()
         with:
-          name: OpenWrt-K2P-Firmware
+          name: OpenWrt-Firmware
           path: ${{ env.FIRMWARE }}
 
       - name: Publish release
