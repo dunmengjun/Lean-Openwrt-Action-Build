@@ -1,9 +1,9 @@
 #=================================================
-# Description: Phicomm MIR3 Openwrt Autobuild
+# Description: Openwrt Autobuild
 # Lisence: MIT
 # Author: tjuyy
 #=================================================
-name: Build Lean's OpenWrt for MIR3
+name: Build Lean's OpenWrt
 
 on:
   release:
@@ -98,7 +98,7 @@ jobs:
         uses: actions/upload-artifact@main
         if: always()
         with:
-          name: OpenWrt_MIR3_bin
+          name: OpenWrt_bin
           path: openwrt/bin
 
       - name: Remove packages
@@ -112,7 +112,7 @@ jobs:
         uses: actions/upload-artifact@main
         if: always()
         with:
-          name: OpenWrt-MIR3-Firmware
+          name: OpenWrt-Firmware
           path: ${{ env.FIRMWARE }}
 
       - name: Publish release
