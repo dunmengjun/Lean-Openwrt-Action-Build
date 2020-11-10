@@ -12,7 +12,7 @@ on:
     branches:
       - master
     paths:
-      - "K2P.config"
+      - "firmware.config"
   schedule:
     - cron: 0 0 * * 1
   #watch:
@@ -63,7 +63,7 @@ jobs:
 
       - name: Load custom configuration
         env:
-          CONFIG_FILE: "K2P.config"
+          CONFIG_FILE: "firmware.config"
           DIY_SH: "diy.sh"
         run: |
           [ -e files ] && mv files openwrt/files
