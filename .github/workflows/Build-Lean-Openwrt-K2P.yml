@@ -1,9 +1,9 @@
 #=================================================
-# Description: Phicomm K2P Openwrt Autobuild
+# Description: Phicomm MIR3 Openwrt Autobuild
 # Lisence: MIT
 # Author: tjuyy
 #=================================================
-name: Build Lean's OpenWrt for K2P
+name: Build Lean's OpenWrt for MIR3
 
 on:
   release:
@@ -12,7 +12,7 @@ on:
     branches:
       - master
     paths:
-      - "K2P.config"
+      - "firmware.config"
   schedule:
     - cron: 0 0 * * 1
   #watch:
@@ -63,7 +63,7 @@ jobs:
 
       - name: Load custom configuration
         env:
-          CONFIG_FILE: "K2P.config"
+          CONFIG_FILE: "firmware.config"
           DIY_SH: "diy.sh"
         run: |
           [ -e files ] && mv files openwrt/files
@@ -98,7 +98,7 @@ jobs:
         uses: actions/upload-artifact@main
         if: always()
         with:
-          name: OpenWrt_K2P_bin
+          name: OpenWrt_MIR3_bin
           path: openwrt/bin
 
       - name: Remove packages
@@ -112,7 +112,7 @@ jobs:
         uses: actions/upload-artifact@main
         if: always()
         with:
-          name: OpenWrt-K2P-Firmware
+          name: OpenWrt-MIR3-Firmware
           path: ${{ env.FIRMWARE }}
 
       - name: Publish release
