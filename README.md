@@ -39,7 +39,7 @@
 
 ## Info
 
-- gateway: 192.168.2.1 (in diy.sh change it)
+- gateway: 192.168.3.1 (in diy.sh change it)
 
 ### Network
 - IPv6
